@@ -439,10 +439,13 @@ var resizePizzas = function(size) {
       default:
         console.log("bug in sizeSwitcher");
     }
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
-    randomPizzas.forEach(function (pizza) {
-      pizza.style.width = newWidth + "%";
-    });
+    //var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+    var randomPizzas = document.querySelector('.randomPizzaContainer:nth-child(1)');
+     randomPizzas.style.width = newWidth + "%";
+    // randomPizzas.forEach(function (pizza) {
+    //   pizza.style.width = newWidth + "%";
+    // });
+    // randomPizzas.style.classList("col-md-6");
   }
 
   changePizzaSizes(size);
@@ -492,8 +495,10 @@ function updatePositions() {
 
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
+    var scrollTop = window.scrollTo();
+
     // document.body.scrollTop is no longer supported in Chrome.
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // var scrollTop = window.scrollTo();
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }

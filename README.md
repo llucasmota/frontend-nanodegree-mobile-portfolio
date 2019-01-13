@@ -32,17 +32,23 @@ seu-caminho/index.html
 ```
  <link href="css/font.css" rel="stylesheet">
 ```
-Adição de atributo ```async``` para scripts ```javascript``` que não são recursos criticos para o carregamento da página:
+* Adição de atributo ```async``` para scripts ```javascript``` que não são recursos criticos para o carregamento da página:
 
  ```
   <script src="http://www.google-analytics.com/analytics.js" async></script>
 ``` 
-
 ```
  <script async src="js/perfmatters.js"></script>
 ```
-
-
+#### Otimização do ```pizza.html```:
+* Foi adicionado atributo ```async```:
+```
+ <script type="text/javascript" src="js/main.js" async></script>
+```
+* Otimização de imagens utilizando o aplicativo ImageOptim:
+```
+https://imageoptim.com/pt-br.html
+```
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
